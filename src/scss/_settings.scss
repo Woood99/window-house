@@ -116,9 +116,6 @@ a {
     padding: 0;
     background: transparent;
     cursor: pointer;
-    &:focus {
-        outline-color: red;
-    }
 }
 
 .list-reset {
@@ -139,10 +136,6 @@ a {
     &::-webkit-search-results-button,
     &::-webkit-search-results-decoration {
         display: none;
-    }
-
-    &:focus {
-        outline-color: red;
     }
 }
 

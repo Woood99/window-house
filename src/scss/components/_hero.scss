@@ -1,0 +1,72 @@
+.hero {
+
+    &__inner {
+        padding: 66px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 574px;
+    }
+
+    &__right {
+        margin-left: 20px;
+    }
+}
+
+.hero-left {
+    &__title {
+        max-width: 480px;
+    }
+
+    &__list {
+        margin-top: 14px;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:first-child) {
+            margin-left: 35px;
+        }
+    }
+
+    &__img {
+        width: 92px;
+        height: 80px;
+    }
+
+    &__descr {
+        margin-top: 20px;
+        color: $whiteColor;
+        font-size: 14px;
+        line-height: math.div(18, 14);
+    }
+}
+
+.hero-right {
+    &__form {
+        max-width: 432px;
+        background: $whiteColor;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 43px 41px 66px;
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-image: url('../img/ruler.png');
+          bottom: 0;
+            left: 0;
+            width: calc(100% + 100px);
+            max-height: 65px;
+            height: 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}

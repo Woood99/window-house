@@ -12,8 +12,11 @@
         line-height: math.div(15, 13);
         padding: 12px 19px 13px;
         border-radius: 3px;
-
+        outline: none;
         &:hover {
+            background-color: $orangeHoverColor;
+        }
+        &:focus {
             background-color: $orangeHoverColor;
         }
     }
@@ -26,9 +29,12 @@
         line-height: math.div(15, 13);
         padding: 12px 23px 13px;
         border-radius: 3px;
-
+        outline: none;
         &:hover {
-            background-color: $purpleSecondaryHoverColor;
+            background-color: $blueColor;
+        }
+        &:focus {
+            background-color: $blueColor;
         }
     }
 
@@ -46,8 +52,85 @@
     }
 }
 
-.title {}
+.title-1 {
+    font-size: 36px;
+    line-height: math.div(42, 36);
+    color: $whiteColor;
+
+    span {
+        color: $orangeColor;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: math.div(28, 24);
+    }
+}
 
 .subtitle {}
 
 .input {}
+
+
+.form-primary {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: $purpleColor;
+        text-align: center;
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 27px;
+    }
+
+    &__label {
+        &:not(:first-child) {
+            margin-top: 15px;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        background-color: #e2e2e2;
+        border-radius: 3px;
+        border: none;
+        font-size: 14px;
+        line-height: math.div(16, 14);
+        padding: 12px 16px;
+        color: #424268;
+        outline: none;
+
+        &::placeholder {
+            color: #424268;
+        }
+
+        &:focus {
+            background-color: lighten($orangeHoverColor, 35%);
+        }
+    }
+
+    &__checkbox {
+        margin-top: 13px;
+
+        .custom-checkbox-primary__content {
+            font-size: 12px;
+            line-height: math.div(14, 12);
+            color: $blackColor;
+
+            span {
+                color: #4B67AF;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 20px;
+        align-self: center;
+        padding: 19px 40px;
+    }
+}
