@@ -1,0 +1,152 @@
+// =============== Reset ===============
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: 400;
+    font-size: inherit;
+}
+
+.page {
+    height: 100%;
+    font-family: $fontFamily, sans-serif;
+    -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+    margin: 0;
+    min-width: $minWidth + px;
+    min-height: 100%;
+    font-size: $fontSize + px;
+    line-height: 100%;
+    background-color: $bodyColor;
+    color: $mainColor;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+// =============== Other ===============
+
+.site-container {
+    overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+.dis-scroll {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    overscroll-behavior: none;
+}
+
+.is-hidden {
+    display: none !important;
+    /* stylelint-disable-line declaration-no-important */
+}
+
+.page--ios .dis-scroll {
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 ($containerOffset + px);
+    max-width: $containerWidth + px;
+}
+
+
+
+
+
+
+
+
+
+
+// =============== Class reset ===============
+.btn-reset {
+    border: 1px solid green;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    &:focus {
+        outline-color: red;
+    }
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.input-reset {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid green;
+    border-radius: 0;
+    background-color: #fff;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        display: none;
+    }
+
+    &:focus {
+        outline-color: red;
+    }
+}
+
+textarea.input-reset {
+    resize: none;
+    padding: 0px 0px;
+}

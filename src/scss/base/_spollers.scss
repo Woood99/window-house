@@ -1,0 +1,55 @@
+.spollers {
+
+    &__item {
+        margin-bottom: 10px;
+        background-color: #77608d;
+    }
+
+    &__title {
+        width: 100%;
+        text-align: left;
+        position: relative;
+        cursor: pointer;
+        border: none;
+        font-size: 18px;
+        color: $whiteColor;
+        padding: 10px 40px 10px 10px;
+        background-color: green;
+    }
+
+    &__content {
+        color: $whiteColor;
+    }
+
+
+
+
+    &__list._init &__title {
+        &::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: $whiteColor;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            transition: transform 0.3s ease 0s;
+        }
+
+        &::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: $whiteColor;
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            transition: transform $transitionSpeed $transitionFunction;
+            transform: rotate(-90deg);
+        }
+
+        &._active:after {
+            transform: rotate(0deg);
+        }
+    }
+}

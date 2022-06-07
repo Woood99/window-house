@@ -1,0 +1,19 @@
+@use "sass:math";
+
+// global components
+@import "vars";
+@import "base";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "common";
+
+
+// big components
+@import "./components/header";
+@import "./components/hero";
+@import "./components/footer";
+
+
+
+// small components

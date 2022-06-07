@@ -1,0 +1,18 @@
+.tabs {
+    .tabs__nav-btn--active {
+        background-color: #ff0001;
+        color: #fff;
+    }
+
+    .tabs__panel {
+        display: none;
+    }
+
+    .tabs__panel--active {
+        display: block;
+    }
+
+    .tabs__nav {
+        display: flex
+    }
+}

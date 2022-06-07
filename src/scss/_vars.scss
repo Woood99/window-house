@@ -1,0 +1,40 @@
+// main
+$fontFamily: "Open Sans";
+$fontSize: 14;
+$minWidth: 320;
+$maxWidth: 1920;
+$contentWidth: 1170;
+$containerOffset: 15;
+$containerWidth: calc($contentWidth + ($containerOffset * 2));
+
+
+
+// main colors
+$bodyColor: #fff;
+$mainColor: #000; // Цвет шрифта по умолчанию
+
+
+// additional colors
+$blackColor: #000;
+$whiteColor: #fff;
+
+
+
+// others vars
+$transitionSpeed: 0.3s;
+$transitionFunction: ease-in-out;
+
+
+
+
+
+
+
+// break points
+$desktop: $containerWidth+px;
+$tablet: 1024px;
+$smallTablet: 768px;
+$mobile: 576px;
+
+
+
