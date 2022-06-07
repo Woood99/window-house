@@ -1,7 +1,49 @@
 .btn {
-   transition: color $transitionSpeed $transitionFunction, 
-   background-color $transitionSpeed $transitionFunction, 
-   border $transitionSpeed $transitionFunction;
+    transition: color $transitionSpeed $transitionFunction,
+        background-color $transitionSpeed $transitionFunction,
+        border $transitionSpeed $transitionFunction;
+    border: none;
+
+    &--primary {
+        background-color: $orangeColor;
+        color: $whiteColor;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: math.div(15, 13);
+        padding: 12px 19px 13px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: $orangeHoverColor;
+        }
+    }
+
+    &--secondary {
+        background-color: $purpleSecondaryColor;
+        color: $whiteColor;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: math.div(15, 13);
+        padding: 12px 23px 13px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: $purpleSecondaryHoverColor;
+        }
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 20px;
+            height: 18px;
+            stroke: #fefefe;
+            fill: none;
+            margin-right: 13px;
+        }
+    }
 }
 
 .title {}

@@ -1,0 +1,60 @@
+.header {
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        height: 97px;
+    }
+
+    &__logo {}
+
+    &__nav {
+        height: 100%;
+        margin-left: 45px;
+        margin-right: 20px;
+
+        .nav__list {
+            height: 100%;
+        }
+
+        .nav__item {
+            height: 100%;
+            position: relative;
+
+            &--active {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: calc(100% - 20px);
+                    background-color: $orangeColor;
+                    height: 4px;
+                }
+            }
+
+            &:not(:first-child) {
+                margin-left: 0px;
+            }
+        }
+
+        .nav__link {
+            padding: 0 10px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        margin-left: auto;
+    }
+
+    &__btn {
+        &:not(:first-child) {
+            margin-left: 14px;
+        }
+    }
+}

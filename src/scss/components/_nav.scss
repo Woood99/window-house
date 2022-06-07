@@ -1,0 +1,23 @@
+.nav {
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: math.div(19 , 16);
+        color: $blackColor;
+        transition: color $transitionSpeed $transitionFunction;
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+        &:hover{
+            color: $orangeColor;
+        }
+    }
+
+    &__link {
+    }
+}

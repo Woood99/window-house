@@ -17,9 +17,11 @@ $mainColor: #2F2F51; // Цвет шрифта по умолчанию
 // additional colors
 $blackColor: #000;
 $whiteColor: #fff;
-$orange: #EF7F04;
-$purple: #2F2F51;
-$purpleSecondary: #3B3A63;
+$orangeColor: #EF7F04;
+$orangeHoverColor: rgb(247, 142, 30);
+$purpleColor: #2F2F51;
+$purpleSecondaryColor: #3B3A63;
+$purpleSecondaryHoverColor: #484699;
 
 
 
@@ -38,6 +40,3 @@ $desktop: $containerWidth+px;
 $tablet: 1024px;
 $smallTablet: 768px;
 $mobile: 576px;
-
-
-
