@@ -1,9 +1,9 @@
 // main
-$fontFamily: "Open Sans";
+$fontFamily: "Roboto";
 $fontSize: 14;
 $minWidth: 320;
 $maxWidth: 1920;
-$contentWidth: 1170;
+$contentWidth: 1200;
 $containerOffset: 15;
 $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
@@ -11,12 +11,15 @@ $containerWidth: calc($contentWidth + ($containerOffset * 2));
 
 // main colors
 $bodyColor: #fff;
-$mainColor: #000; // Цвет шрифта по умолчанию
+$mainColor: #2F2F51; // Цвет шрифта по умолчанию
 
 
 // additional colors
 $blackColor: #000;
 $whiteColor: #fff;
+$orange: #EF7F04;
+$purple: #2F2F51;
+$purpleSecondary: #3B3A63;
 
 
 
