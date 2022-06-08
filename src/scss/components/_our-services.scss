@@ -8,6 +8,10 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, minmax(150px, max-content));
         grid-gap: 11px;
+        @media (max-width:$smallTablet){
+             grid-template-columns: repeat(1,1fr); 
+             grid-template-rows: repeat(4, minmax(150px, max-content));
+        }
     }
 
     &__item {
@@ -46,6 +50,9 @@
         height: 100%;
         display: block;
         padding: 50px 35px 40px;
+        @media (max-width:$tablet){
+            padding: 25px;
+        }
     }
 
     &__content {
@@ -60,10 +67,18 @@
     }
 
     &__img {
-        width: 68px;
-        height: 75px;
+        min-width: 68px;
+        min-height: 75px;
+        max-width: 68px;
+        max-height: 75px;
         object-fit: cover;
         display: block;
+        @media (max-width:$tablet){
+            min-width: 57px;
+            min-height: 65px;
+            max-width: 57px;
+            max-height: 65px;
+        }
     }
 
     &__title {
@@ -71,12 +86,19 @@
         font-weight: 700;
         font-size: 24px;
         line-height: math.div(28, 24);
+        @media (max-width:$tablet){
+            font-size: 20px;
+        }
     }
 
     &__descr {
         margin-top: 30px;
         font-size: 16px;
         line-height: math.div(19, 16);
+        @media (max-width:$tablet){
+            font-size: 14px;
+            margin-top: 20px;
+        }
     }
 
     svg {
