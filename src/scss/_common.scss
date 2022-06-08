@@ -147,8 +147,9 @@
         margin-top: 20px;
         align-self: center;
         padding: 19px 40px;
-        @media (max-width:$mobile){
-             width: 100%; 
+
+        @media (max-width:$mobile) {
+            width: 100%;
         }
     }
 }
@@ -168,7 +169,7 @@
     transition: .3s ease-in-out;
 }
 
-@media (max-width:$bigTablet){
+@media (max-width:$bigTablet) {
     .overlay--visible {
         opacity: 1;
         visibility: visible;
