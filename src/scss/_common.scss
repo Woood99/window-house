@@ -149,3 +149,26 @@
         padding: 19px 40px;
     }
 }
+
+
+
+.mobile--overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(34, 31, 38, .8);
+    z-index: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s ease-in-out;
+}
+
+@media (max-width:$bigTablet){
+    .overlay--visible {
+        opacity: 1;
+        visibility: visible;
+        transition: .3s ease-in-out;
+    }
+}

@@ -1,14 +1,14 @@
 .burger {
     --burger-width: 30px;
-    --burger-height: 30px;
-    --burger-line-height: 2px;
+    --burger-height: 22px;
+    --burger-line-height: 3px;
 
     position: relative;
     border: none;
     padding: 0;
     width: var(--burger-width);
     height: var(--burger-height);
-    color: #000;
+    color: $orangeColor;
     background-color: transparent;
     cursor: pointer;
 
@@ -61,3 +61,7 @@
         }
     }
 }
+
+
+
+

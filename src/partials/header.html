@@ -4,30 +4,35 @@
             <a class="header__logo" href="#">
                 <img src="img/logo.svg" alt="Окна Хаус">
             </a>
-            <nav class="header__nav nav" title="Навигация">
-                <ul class="nav__list list-reset">
-                    <li class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
-                    <li class="nav__item nav__item--active"><a href="#" class="nav__link">Продукция</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Вопрос-ответ</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+            <div class="header__menu header-menu" data-menu></div>
+            <nav class="header__nav nav" title="Навигация" data-da=".header-menu,1200,first">
+                <ul class=" nav__list list-reset">
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link">Услуги</a></li>
+                    <li data-menu-item class="nav__item nav__item--active"><a href="#" class="nav__link">Продукция</a>
+                    </li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link">О компании</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link">Портфолио</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link">Вопрос-ответ</a></li>
+                    <li data-menu-item class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="header__btns">
-                <button type="submit" class="btn btn-reset btn--primary btn--icon header__btn">
+            <div class="header__btns" data-da=".header-menu,650,last">
+                <button type="submit" class="btn btn-reset btn--primary btn--icon header__btn" data-menu-item>
                     <svg>
                         <use xlink:href="img/sprite.svg#calculation"></use>
                     </svg>
                     Заявка на замер
                 </button>
-                <button type="submit" class="btn btn-reset btn--secondary btn--icon header__btn">
+                <button type="submit" class="btn btn-reset btn--secondary btn--icon header__btn" data-menu-item>
                     <svg>
                         <use xlink:href="img/sprite.svg#calculator"></use>
                     </svg>
                     Заказать расчет
                 </button>
             </div>
+            <button class="burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+                <span class="burger__line"></span>
+            </button>
         </div>
     </div>
 </header>
