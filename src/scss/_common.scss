@@ -13,9 +13,11 @@
         padding: 12px 19px 13px;
         border-radius: 3px;
         outline: none;
+
         &:hover {
             background-color: $orangeHoverColor;
         }
+
         &:focus {
             background-color: $orangeHoverColor;
         }
@@ -30,9 +32,11 @@
         padding: 12px 23px 13px;
         border-radius: 3px;
         outline: none;
+
         &:hover {
             background-color: $blueColor;
         }
+
         &:focus {
             background-color: $blueColor;
         }
@@ -65,9 +69,20 @@
     }
 }
 
-.subtitle {}
+.title-2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: math.div(28, 24);
+    text-align: center;
+}
 
-.input {}
+.section {
+    margin-top: 100px;
+
+    @media (max-width:$smallTablet) {
+        margin-top: 50px;
+    }
+}
 
 
 .form-primary {

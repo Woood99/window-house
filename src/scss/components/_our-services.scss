@@ -1,0 +1,94 @@
+.our-services {
+
+    &__title {}
+
+    &__list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, minmax(150px, max-content));
+        grid-gap: 11px;
+    }
+
+    &__item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 3px;
+        transition: filter $transitionSpeed $transitionFunction;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%);
+            border-radius: 3px;
+        }
+
+        &:hover {
+            filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+            svg{
+                stroke: $orangeColor;
+            }
+        }
+    }
+}
+
+.our-services-item {
+
+    &__inner {
+        position: relative;
+        z-index: 99;
+        width: 100%;
+        height: 100%;
+        display: block;
+        padding: 50px 35px 40px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 350px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        width: 68px;
+        height: 75px;
+        object-fit: cover;
+        display: block;
+    }
+
+    &__title {
+        margin-left: 20px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: math.div(28, 24);
+    }
+
+    &__descr {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: math.div(19, 16);
+    }
+
+    svg {
+        width: 40px;
+        height: 20px;
+        display: block;
+        fill: transparent;
+        stroke: $whiteColor;
+        position: absolute;
+        bottom: 27px;
+        right: 27px;
+        transition: stroke $transitionSpeed $transitionFunction;
+        z-index: 100;
+    }
+}
