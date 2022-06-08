@@ -137,7 +137,7 @@
             line-height: math.div(14, 12);
             color: $blackColor;
 
-            span {
+            a {
                 color: #4B67AF;
             }
         }
@@ -147,6 +147,9 @@
         margin-top: 20px;
         align-self: center;
         padding: 19px 40px;
+        @media (max-width:$mobile){
+             width: 100%; 
+        }
     }
 }
 

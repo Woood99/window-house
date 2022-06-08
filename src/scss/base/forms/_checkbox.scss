@@ -54,10 +54,6 @@
     border: 1px solid $orangeHoverColor;
 }
 
-.custom-checkbox-primary__field:hover+.custom-checkbox-primary__content::before {
-    border: 1px solid $orangeHoverColor;
-}
-
 
 .custom-checkbox-primary {
     --checkbox-width: 25px;
