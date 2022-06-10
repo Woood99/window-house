@@ -1,6 +1,7 @@
-.main{
+.main {
     background-color: #f2f2f2;
 }
+
 .btn {
     transition: color $transitionSpeed $transitionFunction,
         background-color $transitionSpeed $transitionFunction,
@@ -185,5 +186,74 @@
         opacity: 1;
         visibility: visible;
         transition: .3s ease-in-out;
+    }
+}
+
+
+
+
+.products-arrow {
+    width: 20px;
+    height: 40px;
+
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        fill: none;
+        stroke: #000;
+        transition: stroke $transitionSpeed $transitionFunction;
+    }
+
+    &-prev {
+        transform: translateY(-50%) rotate(180deg);
+        left: -48px;
+
+        @media (max-width:1280px) {
+            left: 0;
+        }
+    }
+
+    &-next {
+        right: -48px;
+
+        @media (max-width:1280px) {
+            right: 0;
+        }
+    }
+
+    &:hover {
+        svg {
+            stroke: $orangeColor;
+        }
+    }
+
+    &.swiper-button-disabled {
+        svg {
+            stroke: #8F8F8F;
+        }
+
+        &:hover {
+            svg {
+                stroke: #8F8F8F;
+            }
+        }
+    }
+
+    @media (max-width:$smallTablet) {
+        width: 15px;
+        height: 30px;
+        top: 25%;
+        transform: translateY(-25%);
+
+        &.products-arrow-prev {
+            transform: translateY(-25%) rotate(180deg);
+        }
     }
 }

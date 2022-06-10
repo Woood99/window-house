@@ -96,6 +96,15 @@ const swiper = new Swiper('.products-slider', {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    navigation: {
+        nextEl: '.products-arrow-next',
+        prevEl: '.products-arrow-prev',
+    },
+    on: {
+        init: function () {
+            this.navigation.prevEl.classList.add('swiper-button-disabled');
+        }
+    }
 });
 
 

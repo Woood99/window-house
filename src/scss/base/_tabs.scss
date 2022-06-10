@@ -4,16 +4,12 @@
         line-height: math.div(21, 18);
         padding: 9px 25px 10px;
         border: none;
+        transition: background-color $transitionSpeed $transitionFunction, color $transitionSpeed $transitionFunction;
     }
 
     .tabs__nav-btn--active {
         background-color: $orangeColor;
         color: $whiteColor;
-        transition: background-color $transitionSpeed $transitionFunction;
-
-        &:hover {
-            background-color: $orangeHoverColor;
-        }
     }
 
     .tabs__panel {
