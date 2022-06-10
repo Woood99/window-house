@@ -1,3 +1,6 @@
+.main{
+    background-color: #f2f2f2;
+}
 .btn {
     transition: color $transitionSpeed $transitionFunction,
         background-color $transitionSpeed $transitionFunction,
@@ -76,11 +79,19 @@
     text-align: center;
 }
 
-.section {
+.section-p {
     padding-top: 100px;
 
     @media (max-width:$smallTablet) {
         padding-top: 50px;
+    }
+}
+
+.section-m {
+    margin-top: 100px;
+
+    @media (max-width:$smallTablet) {
+        margin-top: 50px;
     }
 }
 
