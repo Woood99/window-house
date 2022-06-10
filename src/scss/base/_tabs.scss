@@ -1,10 +1,61 @@
 [data-tabs="products-tabs"] {
     .tabs__nav-btn {
+        white-space: nowrap;
         font-size: 18px;
         line-height: math.div(21, 18);
         padding: 9px 25px 10px;
         border: none;
         transition: background-color $transitionSpeed $transitionFunction, color $transitionSpeed $transitionFunction;
+
+        @media (max-width:$mobile) {
+            padding: 7px 15px 8px;
+            font-size: 14px;
+        }
+    }
+
+    .tabs__nav-btn--active {
+        background-color: $orangeColor;
+        color: $whiteColor;
+    }
+
+    .tabs__panel {
+        display: none;
+        position: relative;
+    }
+
+    .tabs__panel--active {
+        display: block;
+    }
+
+    .tabs__nav {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width:$smallTablet) {
+            justify-content: flex-start;
+            overflow: auto;
+        }
+    }
+
+    .tabs__content {
+        margin-top: 25px;
+    }
+}
+
+[data-tabs="about-company-tabs"] {
+    .tabs__nav-btn {
+        white-space: nowrap;
+        font-size: 18px;
+        line-height: math.div(21, 18);
+        padding: 9px 25px 10px;
+        border: none;
+        transition: background-color $transitionSpeed $transitionFunction, color $transitionSpeed $transitionFunction;
+
+        @media (max-width:$mobile) {
+            padding: 7px 15px 8px;
+            font-size: 14px;
+        }
     }
 
     .tabs__nav-btn--active {

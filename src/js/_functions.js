@@ -53,6 +53,7 @@ import {
 // Реализация табов
 import GraphTabs from 'graph-tabs';
 const tabs = new GraphTabs('products-tabs');
+const tabs2 = new GraphTabs('about-company-tabs');
 
 
 // ========================================================================================
@@ -85,11 +86,27 @@ import './functions/fix-fullheight';
 // Подключение свайпера
 import Swiper, {
     Navigation,
-    Pagination,
-    EffectFlip,
+    Pagination
 } from 'swiper';
-Swiper.use([Navigation, Pagination, EffectFlip]);
-const swiper = new Swiper('.products-slider', {
+Swiper.use([Navigation, Pagination]);
+
+document.querySelectorAll('.products-slider').forEach(el => {
+    const products = new Swiper(el, {
+        slidesPerView: 1,
+        spaceBetween: 100,
+        speed: 750,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        navigation: {
+            nextEl: el.parentElement.querySelector('.products-arrow-next'),
+            prevEl: el.parentElement.querySelector('.products-arrow-prev'),
+        },
+    });
+});
+
+
+const reviews = new Swiper('.reviews-slider', {
     slidesPerView: 1,
     spaceBetween: 100,
     speed: 750,
@@ -97,14 +114,9 @@ const swiper = new Swiper('.products-slider', {
     observeParents: true,
     observeSlideChildren: true,
     navigation: {
-        nextEl: '.products-arrow-next',
-        prevEl: '.products-arrow-prev',
+        nextEl: '.reviews-arrow-next',
+        prevEl: '.reviews-arrow-prev',
     },
-    on: {
-        init: function () {
-            this.navigation.prevEl.classList.add('swiper-button-disabled');
-        }
-    }
 });
 
 

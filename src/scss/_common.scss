@@ -192,12 +192,12 @@
 
 
 
-.products-arrow {
+.slider-arrow-primary {
     width: 20px;
     height: 40px;
 
     position: absolute;
-    z-index: 99;
+    z-index: 9999;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
@@ -211,7 +211,7 @@
         transition: stroke $transitionSpeed $transitionFunction;
     }
 
-    &-prev {
+    &--prev {
         transform: translateY(-50%) rotate(180deg);
         left: -48px;
 
@@ -220,7 +220,7 @@
         }
     }
 
-    &-next {
+    &--next {
         right: -48px;
 
         @media (max-width:1280px) {
@@ -252,7 +252,7 @@
         top: 25%;
         transform: translateY(-25%);
 
-        &.products-arrow-prev {
+        &.slider-arrow-primary--prev {
             transform: translateY(-25%) rotate(180deg);
         }
     }

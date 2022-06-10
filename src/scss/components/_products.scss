@@ -51,7 +51,9 @@
     }
 }
 
-
+.products-slider{
+    position: relative;
+}
 
 .products-slide {
     display: flex;
@@ -64,11 +66,13 @@
     &__img {
         width: 50%;
         border-radius: 3px;
+
         img {
             height: 100%;
             width: 100%;
             display: block;
             border-radius: 3px;
+
             @media (max-width:$smallTablet) {
                 object-fit: contain;
             }
@@ -85,6 +89,7 @@
         padding: 50px 35px;
         background-color: $whiteColor;
         border-radius: 3px;
+
         @media (max-width:$smallTablet) {
             padding: 20px 0;
             width: 100%;
@@ -138,9 +143,7 @@
         }
     }
 }
-.tabs__panel{
-    position: relative;
-}
+
 .products-slide-item {
     &__name {
         font-size: 18px;
