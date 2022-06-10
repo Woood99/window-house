@@ -2,7 +2,13 @@
 
     &__inner {
         padding: 35px 50px;
-        background-color: $purpleColor;
+        background-image: url('../img/guarantee-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @media (max-width:$smallTablet) {
+            padding: 30px 20px;
+        }
     }
 
     &__title {
@@ -14,6 +20,19 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 50px;
+
+        @media (max-width:$tablet) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width:$smallTablet) {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 20px;
+        }
+
+        @media (max-width:$mobile) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -28,10 +47,20 @@
         padding: 17px 45px 18px;
         font-weight: 700;
         font-size: 16px;
-        line-height: math.div(19, 16);
+        line-height: math.div(19, 19);
 
         svg {
             margin-right: 22px;
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+            margin: 30px auto 0 auto;
+            padding: 14px 35px 13px;
+
+            svg {
+                margin-right: 12px;
+            }
         }
     }
 }
@@ -47,6 +76,11 @@
             width: 100%;
             display: block;
         }
+
+        @media (max-width:$mobile) {
+            width: 75px;
+            height: 75px;
+        }
     }
 
     &__descr {
@@ -54,5 +88,10 @@
         font-size: 16px;
         line-height: math.div(19, 16);
         color: $whiteColor;
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+            margin-top: 20px;
+        }
     }
 }
