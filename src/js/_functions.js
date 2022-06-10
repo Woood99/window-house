@@ -24,7 +24,9 @@
 
 
 // Реализация бургер-меню
-import { burger } from './functions/burger';
+import {
+    burger
+} from './functions/burger';
 
 
 // ========================================================================================
@@ -49,15 +51,17 @@ import { burger } from './functions/burger';
 
 
 // Реализация табов
-// import GraphTabs from 'graph-tabs';
-// const tabs = new GraphTabs('tab');
+import GraphTabs from 'graph-tabs';
+const tabs = new GraphTabs('products-tabs');
 
 
 // ========================================================================================
 
 
 // Получение высоты шапки сайта (не забудьте вызвать функцию)
-import { getHeaderHeight } from './functions/header-height';
+import {
+    getHeaderHeight
+} from './functions/header-height';
 getHeaderHeight();
 
 
@@ -79,11 +83,20 @@ import './functions/fix-fullheight';
 
 
 // Подключение свайпера
-// import Swiper, { Navigation, Pagination } from 'swiper';
-// Swiper.use([Navigation, Pagination]);
-// const swiper = new Swiper(el, {
-//   slidesPerView: 'auto',
-// });
+import Swiper, {
+    Navigation,
+    Pagination,
+    EffectFlip,
+} from 'swiper';
+Swiper.use([Navigation, Pagination, EffectFlip]);
+const swiper = new Swiper('.products-slider', {
+    slidesPerView: 1,
+    spaceBetween: 100,
+    speed: 750,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+});
 
 
 // ========================================================================================

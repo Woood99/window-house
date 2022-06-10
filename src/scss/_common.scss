@@ -77,10 +77,10 @@
 }
 
 .section {
-    margin-top: 100px;
+    padding-top: 100px;
 
     @media (max-width:$smallTablet) {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 }
 
