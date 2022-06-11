@@ -59,3 +59,91 @@
     --checkbox-width: 25px;
     --checkbox-height: 25px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custom-checkbox-secondary {
+    position: relative;
+
+    &__field {
+        appearance: none;
+        position: absolute;
+    }
+
+    &__content {
+        display: block;
+        padding-left: 35px;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: #E2E2E2;
+            border-radius: 3px;
+            width: var(--checkbox-width);
+            height: var(--checkbox-height);
+            box-sizing: border-box;
+            transition: background-color $transitionSpeed $transitionFunction;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: -10px;
+            width: var(--checkbox-width);
+            height: var(--checkbox-height);
+            box-sizing: border-box;
+            background-image: url("../img/mark-check.svg");
+            background-position: center;
+            background-size: 14px;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity $transitionSpeed $transitionFunction;
+        }
+    }
+}
+
+.custom-checkbox-secondary__field:checked+.custom-checkbox-secondary__content::after {
+    opacity: 1;
+}
+
+.custom-checkbox-secondary__field:disabled+.custom-checkbox-secondary__content {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.custom-checkbox-secondary__field:focus+.custom-checkbox-secondary__content::before {}
+
+
+.custom-checkbox-secondary {
+    --checkbox-width: 25px;
+    --checkbox-height: 25px;
+}

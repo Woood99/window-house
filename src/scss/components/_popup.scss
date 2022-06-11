@@ -1,0 +1,95 @@
+.add-review {
+
+    &__content {}
+
+    &__form {}
+}
+
+.add-review-form {
+    .form-primary {
+        &__title {
+            font-size: 24px;
+            line-height: math.div(28 , 24);
+        }
+
+        &__box {}
+
+        &__label {}
+
+        &__input {
+            font-size: 16px;
+            line-height: math.div(19 , 16);
+        }
+        &__textarea {
+            height: 135px;
+        }
+
+        &__checkbox {
+           
+        }
+
+        &__btn {}
+    }
+}
+
+
+.modal-primary__container {
+    width: 595px;
+    padding: 55px 100px;
+
+    .graph-modal {
+        &__close {
+            top: 20px;
+            right: 20px;
+            border: none;
+            width: 21px;
+            height: 21px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: $purpleColor;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 2px;
+                transition: background-color $transitionSpeed $transitionFunction;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+
+            &:hover {
+
+                &::before,
+                &:after {
+                    background-color: $orangeColor;
+                }
+            }
+
+            &:focus {
+                outline: none;
+
+                &::before,
+                &:after {
+                    background-color: $orangeColor;
+                }
+            }
+        }
+    }
+    @media (max-width:$smallTablet){
+        width: 95%;
+         padding: 45px 15px; 
+    }
+}
+
+
+
+
+
