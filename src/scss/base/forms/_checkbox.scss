@@ -67,6 +67,62 @@
 
 
 
+.checkbox-secondary {
+    &.checkbox {
+        position: relative;
+
+        .checkbox__input {
+            position: absolute;
+            width: 0;
+            height: 0;
+            opacity: 0;
+
+            &:focus+.checkbox__label:before {}
+
+            &:checked+.checkbox__label:before {}
+
+            &:checked+.checkbox__label:after {
+                opacity: 1;
+            }
+        }
+
+        .checkbox__label {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            position: relative;
+
+            &:before {
+                content: "";
+                align-self: flex-start;
+                flex: 0 0 25px;
+                width: 25px;
+                height: 25px;
+                background-color: #E2E2E2;
+                border-radius: 3px;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                align-self: flex-start;
+                flex: 0 0 25px;
+                width: 25px;
+                height: 25px;
+                background-image: url("../img/mark-check.svg");
+                background-position: center;
+                background-size: 14px;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition: opacity $transitionSpeed $transitionFunction;
+            }
+        }
+
+        .checkbox__text {}
+    }
+}
 
 
 

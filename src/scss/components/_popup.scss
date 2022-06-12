@@ -1,34 +1,83 @@
-.add-review {
-
-    &__content {}
-
-    &__form {}
+.graph-modal {
+    z-index: 10000;
 }
 
 .add-review-form {
     .form-primary {
         &__title {
+            display: flex;
+            align-items: center;
             font-size: 24px;
-            line-height: math.div(28 , 24);
+            line-height: math.div(28, 24);
+
+            svg {
+                width: 30px;
+                height: 27px;
+                stroke: #EF7F1A;
+                fill: none;
+                margin-right: 48px;
+            }
+
+            @media (max-width:$smallTablet) {
+                justify-content: center;
+
+                svg {
+                    margin-right: 15px;
+                }
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 20px;
+
+                svg {
+                    width: 25px;
+                    height: 22px;
+                }
+            }
         }
-
-        &__box {}
-
-        &__label {}
 
         &__input {
             font-size: 16px;
-            line-height: math.div(19 , 16);
+            line-height: math.div(19, 16);
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+            }
         }
+
         &__textarea {
             height: 135px;
+
+            @media (max-width:$mobile) {
+                height: 100px;
+            }
         }
 
         &__checkbox {
-           
+            .checkbox__text {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+                color: #111E97;
+                margin-left: 12px;
+
+                @media (max-width:$mobile) {
+                    font-size: 13px;
+                    margin-left: 10px;
+                }
+            }
         }
 
-        &__btn {}
+        &__btn {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            padding: 16px 65px;
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+                padding: 14px 30px;
+            }
+        }
     }
 }
 
@@ -38,6 +87,7 @@
     padding: 55px 100px;
 
     .graph-modal {
+
         &__close {
             top: 20px;
             right: 20px;
@@ -83,13 +133,9 @@
             }
         }
     }
-    @media (max-width:$smallTablet){
-        width: 95%;
-         padding: 45px 15px; 
+
+    @media (max-width:$smallTablet) {
+        width: 90%;
+        padding: 50px 15px;
     }
 }
-
-
-
-
-

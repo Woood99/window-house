@@ -7,6 +7,9 @@
 
             <form action="#" class="add-review__form add-review-form form-primary">
                 <h2 class="form-primary__title">
+                    <svg>
+                        <use xlink:href="img/sprite.svg#message"></use>
+                    </svg>
                     Добавьте Ваш отзыв
                 </h2>
                 <div class="form-primary__box">
@@ -23,6 +26,14 @@
                     <label class="form-primary__label">
                         <textarea name="textarea" class="input-reset form-primary__input form-primary__textarea"
                             placeholder="Ваш отзыв"></textarea>
+                    </label>
+                </div>
+                <div class="checkbox-secondary checkbox form-primary__checkbox">
+                    <input id="c_1" class="checkbox__input" type="checkbox" value="1">
+                    <label for="c_1" class="checkbox__label">
+                        <span class="checkbox__text">
+                            Я согласен(на) на обработку персональных данных
+                        </span>
                     </label>
                 </div>
                 <button class="btn btn-reset btn--primary form-primary__btn">Оставить отзыв</button>
