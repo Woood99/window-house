@@ -2,6 +2,67 @@
     z-index: 10000;
 }
 
+.modal-primary__container {
+    width: 595px;
+    padding: 55px 100px;
+
+    .graph-modal {
+
+        &__close {
+            top: 20px;
+            right: 20px;
+            border: none;
+            width: 21px;
+            height: 21px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                background-color: $purpleColor;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 2px;
+                transition: background-color $transitionSpeed $transitionFunction;
+            }
+
+            &::before {
+                transform: rotate(45deg);
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+            }
+
+            &:hover {
+
+                &::before,
+                &:after {
+                    background-color: $orangeColor;
+                }
+            }
+
+            &:focus {
+                outline: none;
+
+                &::before,
+                &:after {
+                    background-color: $orangeColor;
+                }
+            }
+        }
+    }
+
+    @media (max-width:$smallTablet) {
+        width: 90%;
+        padding: 50px 15px;
+    }
+}
+
+
+
+
 .add-review-form {
     .form-primary {
         &__title {
@@ -82,60 +143,264 @@
 }
 
 
-.modal-primary__container {
-    width: 595px;
-    padding: 55px 100px;
 
-    .graph-modal {
 
-        &__close {
-            top: 20px;
-            right: 20px;
-            border: none;
-            width: 21px;
-            height: 21px;
+
+.froze {
+    background-color: $orangeColor;
+    border-radius: 10px;
+    filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
+
+    .graph-modal__close {
+
+        &::before,
+        &::after {
+            background-color: $whiteColor;
+        }
+
+        &:hover {
 
             &::before,
-            &::after {
-                content: '';
-                position: absolute;
+            &:after {
                 background-color: $purpleColor;
-                left: 0;
-                top: 50%;
-                width: 100%;
-                height: 2px;
-                transition: background-color $transitionSpeed $transitionFunction;
             }
+        }
 
-            &::before {
-                transform: rotate(45deg);
-            }
+        &:focus {
+            outline: none;
 
-            &::after {
-                transform: rotate(-45deg);
-            }
-
-            &:hover {
-
-                &::before,
-                &:after {
-                    background-color: $orangeColor;
-                }
-            }
-
-            &:focus {
-                outline: none;
-
-                &::before,
-                &:after {
-                    background-color: $orangeColor;
-                }
+            &::before,
+            &:after {
+                background-color: $purpleColor;
             }
         }
     }
 
-    @media (max-width:$smallTablet) {
-        width: 90%;
-        padding: 50px 15px;
+}
+
+.froze-form {
+    .form-primary {
+        &__title {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            line-height: math.div(28, 24);
+            color: $whiteColor;
+            justify-content: center;
+
+            svg {
+                width: 30px;
+                height: 27px;
+                stroke: $whiteColor;
+                fill: none;
+                margin-right: 26px;
+            }
+
+            @media (max-width:$smallTablet) {
+
+                svg {
+                    margin-right: 15px;
+                }
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 20px;
+
+                svg {
+                    width: 25px;
+                    height: 22px;
+                }
+            }
+        }
+
+        &__input {
+            background-color: $whiteColor;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+
+            &:focus {
+                background-color: #fde5ca;
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+            }
+        }
+
+        &__checkbox {
+            margin-top: 20px;
+
+            .checkbox__label {
+                &::after {
+                    background-color: $whiteColor;
+                }
+            }
+
+            .checkbox__text {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+                color: $whiteColor;
+                margin-left: 12px;
+
+                span {
+                    color: $purpleColor;
+                }
+
+                @media (max-width:$mobile) {
+                    font-size: 13px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__btn {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            padding: 16px 65px;
+            background-color: $whiteColor;
+            color: $orangeColor;
+
+            &:hover {
+                background-color: darken($whiteColor, 8%);
+                box-shadow: 0 0 29px rgba($mainColor, 0.15);
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+                padding: 14px 30px;
+            }
+        }
+    }
+}
+
+
+
+
+
+.calculation {
+    background-color: $purpleColor;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
+    .graph-modal__close {
+
+        &::before,
+        &::after {
+            background-color: $whiteColor;
+        }
+
+        &:hover {
+
+            &::before,
+            &:after {
+                background-color: $orangeColor;
+            }
+        }
+
+        &:focus {
+            outline: none;
+
+            &::before,
+            &:after {
+                background-color: $orangeColor;
+            }
+        }
+    }
+}
+
+.calculation-form {
+    .form-primary {
+        &__title {
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            line-height: math.div(28, 24);
+            color: $whiteColor;
+            justify-content: center;
+
+            svg {
+                width: 30px;
+                height: 27px;
+                stroke: $whiteColor;
+                fill: none;
+                margin-right: 26px;
+            }
+
+            @media (max-width:$smallTablet) {
+
+                svg {
+                    margin-right: 15px;
+                }
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 20px;
+
+                svg {
+                    width: 25px;
+                    height: 22px;
+                }
+            }
+        }
+
+        &__input {
+            background-color: $whiteColor;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+
+            &:focus {
+                background-color: #fde5ca;
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+            }
+        }
+
+        &__checkbox {
+            margin-top: 20px;
+
+            .checkbox__label {
+                &::after {
+                    background-color: $whiteColor;
+                }
+            }
+
+            .checkbox__text {
+                font-size: 14px;
+                line-height: math.div(16, 14);
+                color: $whiteColor;
+                margin-left: 12px;
+
+                span {
+                    color: $orangeColor;
+                }
+
+                @media (max-width:$mobile) {
+                    font-size: 13px;
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        &__btn {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            padding: 16px 65px;
+            background-color: $whiteColor;
+            color: $purpleColor;
+
+            &:hover {
+                background-color: darken($whiteColor, 8%);
+                box-shadow: 0 0 29px rgba($mainColor, 0.15);
+            }
+
+            @media (max-width:$mobile) {
+                font-size: 14px;
+                padding: 14px 30px;
+            }
+        }
     }
 }

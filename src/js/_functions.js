@@ -119,6 +119,19 @@ const reviews = new Swiper('.reviews-slider', {
     },
 });
 
+const portfolio = new Swiper('.portfolio-slider', {
+    slidesPerView: 4,
+    spaceBetween: 45,
+    speed: 750,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
+    navigation: {
+        nextEl: '.portfolio-arrow-next',
+        prevEl: '.portfolio-arrow-prev',
+    },
+});
+
 
 // ========================================================================================
 

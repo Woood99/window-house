@@ -5,7 +5,8 @@
 .btn {
     transition: color $transitionSpeed $transitionFunction,
         background-color $transitionSpeed $transitionFunction,
-        border $transitionSpeed $transitionFunction;
+        border $transitionSpeed $transitionFunction,
+        box-shadow $transitionSpeed $transitionFunction;
     border: none;
 
     &--primary {
