@@ -1,0 +1,33 @@
+.social {
+    display: flex;
+
+    &__item {
+        width: 21px;
+        height: 20px;
+
+        &:hover {
+            svg {
+                stroke: $purpleColor;
+            }
+        }
+
+        &:not(:first-child) {
+            margin-left: 14px;
+        }
+    }
+
+    &__link {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+            fill: none;
+            stroke: $orangeColor;
+            transition: stroke $transitionSpeed $transitionFunction;
+        }
+    }
+}

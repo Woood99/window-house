@@ -1,0 +1,240 @@
+.contacts {
+
+    &__title {}
+
+    &__inner {
+        margin-top: 60px;
+        display: flex;
+
+        @media (max-width:$smallTablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        padding-bottom: 120px;
+        flex: 0 1 percent(605, 1100);
+        position: relative;
+
+        @media (max-width:$tablet) {
+            width: 45%;
+            flex: 0 1 45%;
+            margin-right: 25px;
+            padding-bottom: 0;
+        }
+
+        @media (max-width:$smallTablet) {
+            flex: 0 1 100%;
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__right {
+        flex: 0 1 percent(511, 1100);
+
+        @media (max-width:$tablet) {
+            flex: 0 1 55%;
+        }
+
+        @media (max-width:$smallTablet) {
+            margin-top: 50px;
+            flex: 0 1 100%;
+        }
+    }
+}
+
+.contacts-left {
+
+    &__phones {
+        display: grid;
+        grid-template-columns: 25px max-content max-content;
+        align-items: center;
+        grid-row-gap: 15px;
+        grid-column-gap: 25px;
+
+        span {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: math.div(21, 18);
+            grid-column: 1/-1;
+
+            @media (max-width:$tablet) {
+                font-size: 16px;
+            }
+        }
+
+        svg {
+            width: 25px;
+            height: 26px;
+            display: block;
+            fill: none;
+            stroke: $orangeColor;
+        }
+
+        a {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: math.div(36, 22);
+            transition: color $transitionSpeed $transitionFunction;
+
+            &:hover {
+                color: $orangeColor;
+            }
+
+            &:not(:last-child) {
+                margin-right: 20px;
+
+                @media (max-width:$tablet) {
+                    margin-right: 0;
+                }
+            }
+
+            @media (max-width:$tablet) {
+                font-size: 16px;
+                grid-column: 2/-1;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            grid-gap: 15px;
+            grid-template-columns: 25px max-content;
+        }
+        @media (max-width:$smallTablet){
+            grid-template-columns: 25px 1fr;
+        }
+    }
+
+    &__address {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: math.div(21, 18);
+
+        svg {
+            width: 25px;
+            height: 26px;
+            display: block;
+            fill: none;
+            stroke: $orangeColor;
+            margin-right: 25px;
+
+            @media (max-width:$tablet) {
+                margin-right: 15px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 16px;
+        }
+    }
+
+    &__email {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: math.div(21, 18);
+
+        svg {
+            width: 25px;
+            height: 26px;
+            display: block;
+            fill: none;
+            stroke: $orangeColor;
+            margin-right: 25px;
+
+            @media (max-width:$tablet) {
+                margin-right: 15px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            font-size: 16px;
+        }
+    }
+
+    &__descr {
+        max-width: 230px;
+        margin-top: 50px;
+        font-size: 16px;
+        line-height: math.div(22, 16);
+
+        @media (max-width:$tablet) {
+            margin-top: 35px;
+            max-width: 100%;
+            font-size: 14px;
+        }
+    }
+
+    &__social {
+        margin-top: 25px;
+
+        @media (max-width:$tablet) {
+            margin-top: 15px;
+        }
+    }
+
+    &__img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 330px;
+
+        @media (max-width:$tablet) {
+            display: none;
+        }
+    }
+}
+
+
+.contacts-right {
+
+    &__form {
+        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+        background-color: $whiteColor;
+        border-radius: 10px;
+    }
+}
+
+.contacts-right-form {
+    padding: 50px 55px;
+
+    .form-primary {
+
+        &__title {}
+
+        &__box {}
+
+        &__label {}
+
+        &__input {}
+
+        &__textarea {
+            height: 135px;
+
+            @media (max-width:$mobile) {
+                height: 100px;
+            }
+        }
+
+        &__checkbox {
+            .checkbox__text {
+                margin-left: 12px;
+
+                span {
+                    color: $orangeColor;
+                }
+            }
+        }
+
+
+        &__btn {}
+    }
+
+    @media (max-width:$mobile) {
+        padding: 25px 15px;
+    }
+}
