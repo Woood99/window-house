@@ -86,9 +86,10 @@ import './functions/fix-fullheight';
 // Подключение свайпера
 import Swiper, {
     Navigation,
-    Pagination
+    Pagination,
+    EffectFade,
 } from 'swiper';
-Swiper.use([Navigation, Pagination]);
+Swiper.use([Navigation, Pagination, EffectFade]);
 
 document.querySelectorAll('.products-slider').forEach(el => {
     const products = new Swiper(el, {
@@ -130,6 +131,44 @@ const portfolio = new Swiper('.portfolio-slider', {
         nextEl: '.portfolio-arrow-next',
         prevEl: '.portfolio-arrow-prev',
     },
+    breakpoints: {
+        320: {
+            slidesPerView: 2.4,
+            spaceBetween: 10,
+        },
+        576: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        1024: {
+            slidesPerView: 4,
+        },
+    }
+});
+
+
+document.querySelectorAll('.portfolio-modal-slider').forEach(el => {
+    const portfolioModal = new Swiper(el, {
+        slidesPerView: 1,
+        spaceBetween: 50,
+        speed: 750,
+        observer: true,
+        observeParents: true,
+        observeSlideChildren: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        pagination: {
+            el: el.querySelector('.portfolio-modal-slider__pagination'),
+            type: 'bullets',
+            clickable: true,
+        },
+    });
 });
 
 

@@ -1,0 +1,251 @@
+.portfolio {
+    background-color: $whiteColor;
+
+    &__inner {
+        margin-top: 45px;
+    }
+}
+
+.portfolio-slider {
+    padding: 20px;
+    margin: -20px;
+}
+
+.portfolio-slide {
+    transition: filter $transitionSpeed $transitionFunction;
+
+    &__btn {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    &:hover {
+        filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.25));
+    }
+}
+
+
+.portfolio-modal-slide {
+    img {
+        width: 100%;
+        max-height: 228px;
+
+        @media (max-width:$smallTablet) {
+            max-height: 300px;
+        }
+    }
+}
+
+.portfolio-modal {
+
+    &__top {
+        padding: 48px 83px 0;
+        display: flex;
+
+        @media (max-width:$tablet) {
+            padding: 60px 35px 0;
+        }
+
+        @media (max-width:$smallTablet) {
+            flex-direction: column;
+            padding: 60px 15px 0;
+        }
+    }
+
+    &__left {
+        width: 360px;
+
+        @media (max-width:$tablet) {
+            width: 250px;
+        }
+
+        @media (max-width:$smallTablet) {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        margin-left: 60px;
+
+        @media (max-width:$tablet) {
+            margin-left: 20px;
+            flex: 1 1 auto;
+        }
+
+        @media (max-width:$smallTablet) {
+            margin-left: 0;
+            margin-top: 25px;
+        }
+    }
+
+    &__bottom {
+        margin-top: 30px;
+
+        @media (max-width:$smallTablet) {
+            margin-top: 20px;
+        }
+    }
+}
+
+.portfolio-modal-right {
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        @media (max-width:$mobile) {
+            flex-direction: column;
+            align-items: start;
+        }
+    }
+
+    &__date {
+        font-size: 14px;
+        line-height: math.div(16, 14);
+        color: #9494A8;
+    }
+
+    &__address {
+        margin-left: 25px;
+        display: flex;
+        align-items: center;
+
+        span {
+            margin-left: 11px;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+        }
+
+        @media (max-width:$tablet) {
+            margin-left: 15px;
+
+            img {
+                display: none;
+            }
+
+            span {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width:$mobile) {
+            margin-left: 0;
+            margin-top: 10px;
+        }
+    }
+
+    &__body {
+        margin-top: 15px;
+    }
+
+    &__title {
+        text-align: left;
+    }
+
+    &__descr {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: math.div(19, 16);
+
+        span:nth-child(1) {
+            font-weight: 700;
+        }
+
+        span:nth-child(2) {
+            font-weight: 400;
+        }
+
+        @media (max-width:$mobile) {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+    }
+
+    &__footer {
+        margin-top: 25px;
+        display: flex;
+
+        @media (max-width:$tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        &:not(:first-child) {
+            margin-left: 14px;
+
+            @media (max-width:$tablet) {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        &:nth-child(2) {
+            font-weight: 700;
+            font-size: 13px;
+            line-height: math.div(15, 13);
+            padding: 10px 14px;
+
+            svg {
+                stroke: $orangeColor;
+                width: 28px;
+                height: 18px;
+            }
+
+            @media (max-width:$tablet) {
+                padding: 12px 19px 13px;
+            }
+        }
+
+        @media (max-width:$tablet) {
+            justify-content: center;
+        }
+    }
+}
+
+
+.portfolio-modal-slider__pagination {
+    margin-top: 14px;
+    display: flex;
+    justify-content: center;
+
+    .swiper-pagination-bullet {
+        position: relative;
+        z-index: 999;
+        width: 10px;
+        height: 10px;
+        background-color: $whiteColor;
+        border: 2px solid #9494A8;
+        border-radius: 50%;
+        display: block;
+
+        &.swiper-pagination-bullet-active {
+            background-color: $orangeColor;
+        }
+
+        margin: 0 !important;
+
+        &:not(:first-child) {
+            margin-left: 12px !important;
+        }
+    }
+}
+
+.portfolio-modal-map {
+    width: 100%;
+    height: 311px;
+    background-color: green;
+
+    [class*="copyrights-pane"] {
+        display: none !important;
+    }
+}
