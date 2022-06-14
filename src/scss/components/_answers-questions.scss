@@ -1,0 +1,126 @@
+.answers-questions {
+    @media (max-width:$smallTablet) {
+        background-color: $orangeColor;
+    }
+
+    &__inner {
+        background-color: $orangeColor;
+        padding: 50px 100px;
+
+        @media (max-width:$tablet) {
+            padding: 50px 25px;
+        }
+
+        @media (max-width:$smallTablet) {
+            padding: 50px 0;
+            background-color: transparent;
+        }
+    }
+
+    &__title {
+        color: $whiteColor;
+    }
+
+    &__spollers {
+        margin-top: 50px;
+    }
+
+    .spollers {
+
+        &__item {
+            border-radius: 3px;
+            margin: 0;
+            background-color: $whiteColor;
+            transition: box-shadow $transitionSpeed $transitionFunction, background-color $transitionSpeed $transitionFunction;
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+                .spollers__title {
+                    background-color: $whiteColor;
+
+                    svg {
+                        stroke: $orangeColor;
+                    }
+                }
+            }
+        }
+
+        &__title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: math.div(21, 18);
+            color: $purpleColor;
+            padding: 31px 30px 29px 19px;
+            background-color: #EEEEF3;
+            transition: background-color $transitionSpeed $transitionFunction;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 3px;
+
+            svg {
+                flex: 0 0 29px;
+                margin-left: 20px;
+                width: 29px;
+                height: 16px;
+                fill: none;
+                stroke: $purpleColor;
+                transition: transform $transitionSpeed $transitionFunction,
+                    stroke $transitionSpeed $transitionFunction;
+            }
+
+            @media (max-width:$smallTablet) {
+                padding: 20px 20px 19px 20px;
+                font-size: 16px;
+            }
+            @media (max-width:$mobile){
+                 font-size: 14px; 
+            }
+            @media (max-width:$mobile){
+               svg{
+                flex: 0 0 25px;
+                width: 25px;
+                height: 14px; 
+               }
+            }
+        }
+
+        &__content {
+            color: $purpleColor;
+            font-size: 16px;
+            line-height: math.div(19, 16);
+            padding: 0 100px 32px 19px;
+            background-color: $whiteColor;
+            border-bottom-left-radius: 3px;
+            border-bottom-right-radius: 3px;
+
+            @media (max-width:$smallTablet) {
+                font-size: 14px;
+                padding: 0 50px 20px 20px;
+            }
+        }
+
+        &__list._init .spollers__title {
+
+            &::before,
+            &::after {
+                display: none;
+            }
+
+            &._active {
+                background-color: $whiteColor;
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}

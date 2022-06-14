@@ -1,1 +1,1 @@
-import './components/maps'
+import './components/maps';
